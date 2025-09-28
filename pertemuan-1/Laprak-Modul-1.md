@@ -2,21 +2,19 @@
 <p align="center">Aedil Riski Ansyah - 103112400101</p>
 
 ## Dasar Teori
-isi dengan penjelasan dasar teori disertai referensi jurnal (gunakan kurung siku [] untuk pernyataan yang mengambil refernsi dari jurnal).
-contoh :
-Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk struktur data yang berisi kumpulan data yang tersusun secara sekuensial, saling bersambungan, dinamis, dan terbatas[1]. Linked list terdiri dari sejumlah node atau simpul yang dihubungkan secara linier dengan bantuan pointer.
+Bahasa C++ merupakan turunan dari bahasa C yang populer dan banyak dibutuhkan dalam dunia kerja [2]. Setiap program C++ memiliki struktur dasar yang terdiri dari fungsi utama int main() yang menjadi titik awal dan akhir eksekusi program [2]. Program umumnya menyertakan library atau file judul menggunakan perintah preprocessor #include <iostream> untuk dapat melakukan operasi input-output [2]. Setiap perintah atau statement di dalam C++ harus diakhiri dengan tanda titik koma (;) [2].
 
-### A. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
+Dalam C++, data disimpan dalam variabel, yaitu sebuah nama untuk lokasi di memori yang nilainya dapat berubah selama program berjalan [2]. Setiap variabel harus dideklarasikan dengan tipe data tertentu, seperti int untuk bilangan bulat, float atau real untuk bilangan desimal, dan char untuk karakter tunggal [2]. Nilai yang tidak berubah selama eksekusi program disebut konstanta dan didefinisikan menggunakan kata kunci const [2]. Untuk mengelompokkan beberapa variabel dengan tipe data yang mungkin berbeda menjadi satu kesatuan, digunakan tipe data bentukan yang disebut struktur atau struct [1, 2].
 
-### B. ...<br/>
-...
-#### 1. ...
-#### 2. ...
-#### 3. ...
+Interaksi dengan pengguna dilakukan melalui perintah input dan output. Perintah cout digunakan untuk menampilkan data ke layar (output), sedangkan cin digunakan untuk menerima masukan dari keyboard (input) [2].
+
+Logika program dibangun menggunakan operator, kondisional, dan perulangan.
+
+* Operator adalah simbol untuk melakukan operasi, seperti operator aritmatika (+, -, *, /, %), operator relasional atau perbandingan (<, >, ==), dan operator logika (and, or) [2].
+
+* Kondisional digunakan untuk pengambilan keputusan. Pernyataan if-else digunakan untuk memilih satu dari dua blok kode berdasarkan suatu kondisi, sedangkan switch-case digunakan untuk memilih dari banyak blok kode alternatif [2].
+
+* Perulangan (looping) digunakan untuk menjalankan blok kode berulang kali. Struktur perulangan yang umum adalah for, while, dan do-while (atau repeat-until) [2].
 
 ## Guided 
 
@@ -46,7 +44,7 @@ int main() {
     return 0;
 } 
 ```
-penjelasan singkat guided 1
+Program ini akan menerima input dua buah integer (angka1 dan angka2) kemudian menghitung hasil penjumlahan, pengurangan, perkalian, pembagian dan modulus dari dua bilangan tersebut. Untuk pembagian hasilnya akan dibulatkan ke bawah.
 
 ### 2. Percabangan
 
@@ -73,7 +71,7 @@ int main() {
     }
 }
 ```
-penjelasan singkat guided 2
+Program ini merupakan program untuk membandingkan dua integer (angka1 dan angka2). Program ini akan membandingkan apakah angka1 lebih besar, sama dengan, atau lebih kecil dari angka2 menggunakan percabangan if-else if. Setelah itu program juga akan mengecek apakah kedua angka tidak sama (!=).
 
 ### 3. Perulangan For
 
@@ -98,7 +96,7 @@ int main() {
     return 0;
 }
 ```
-penjelasan singkat guided 3
+Program ini adalah program yang memasukkan sebuah integer (angka1) kemudian dilakukan dua proses for-loop secara terpisah. For-loop pertama akan mencetak angka dari 0 hingga satu angka sebelum angka1 (increment). For-loop kedua akan mencetak bilangan menurun dari 20 hingga satu angka setelah angka1.
 
 ### 4. Perulangan While
 
@@ -129,7 +127,7 @@ int main() {
     return 0;
 }
 ```
-penjelasan singkat guided 4
+Program ini menunjukkan perbedaan while-loop dan do-while-loop menggunakan input angka1. While-loop akan mencetak angka secara increment mulai dari 0, namun hal ini hanya berjalan jika angka1 memenuhi sebuah kondisi (i < angka1). Sedangkan do-while-loop akan mencetak angka secara increment mulai dari 11 dengan perbedaan bahwa kodenya minimal akan dijalankan satu kali sebelum kondisinya (i < angka1) diperiksa di akhir. Hal ini menyebabkan do-while-loop setidaknya akan mencetak angka 11, bahkan jika kondisi angka1 tidak terpenuhi.
 
 ### 5. Struct
 
@@ -163,7 +161,7 @@ int main() {
     return 0;
 }
 ```
-penjelasan singkat guided 5
+Program ini menunjukkan penggunaan struct untuk membuat tipe data khusus raport yang menyimpan nilai dan nama. Program kemudian mendeklarasikan array bernama siswa untuk menampumg data raport dari lima siswa. Menggunakan for-loop, user diminta untuk memasukkan data nama dan nilai dari lima siswa tersebut. Setelah semua data tersimpan di array, while-loop digunakan untuk menampilkan data kelima mahasiswa tersebut.
 
 ## Unguided 
 
@@ -201,7 +199,7 @@ int main() {
 ##### Output 2
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-1/output2-soal1-modul1.png)
 
-Program ini merupakan program 
+Program ini merupakan program kalkulator sederhana yang inputnya berupa dua bilangan bertipe double (desimal) yaitu a dan b. Program meminta pengguna memasukkan angka a dan b kemudian menghitung hasil penjumlahan, pengurangan, perkalian dan pembagian dua bilangan tersebut. Outputnya berupa bilangan desimal dengan dua angka dibelakang koma. Program ini juga menggunakan if-else untuk mengantisipasi hasil pembagian yang tidak terdefinisi (b = 0).
 
 ### 2. Buatlah sebuah program yang menerima masukan angka dan mengeluarkan output nilai angka tersebut dalam bentuk tulisan. Angka yang akan di- input-kan user adalah bilangan bulat positif mulai dari 0 s.d 100
 
@@ -268,7 +266,7 @@ int main() {
 ##### Output 2
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-1/output2-soal2-modul1.png)
 
-penjelasan unguided 2
+Program ini adalah program yang mengkonversi dari angka ke tulisan untuk rentang angka 0 sampai 100. Program ini menggunakan fungsi satuan untuk mengubah digit 1-9 menjadi sebuah teks. Dalam fungsi main, input dari pengguna akan divalidasi untuk memastikan rentang angkanya sesuai dengan yang diharapkan, setelah itu program akan menggunakan if-else if untuk menentukan kategori angka seperti satuan, puluhan dan belasan. Program ini juga mengantisipasi angka khusus seperti nol, sepuluh, sebelas, dan seratus. Untuk puluhan program akan memecah angka menjadi satuan dan puluhan untuk merangkai nama bilangan yang benar.
 
 ### 3. Buatlah program yang dapat memberikan input dan output sbb.
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-1/modul1-soal3.png)
@@ -309,12 +307,12 @@ int main() {
 ##### Output 2
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-1/output2-soal3-modul1.png)
 
-penjelasan unguided 3
+Program ini adalah program untuk mencetak segitiga sama sisi terbalik dan berisi angka. Setelah meminta integer (n), program menggunakan for-loop utama secara decrement dari n hingga 0 untuk membuat setiap baris. Di setiap baris, program mencetak sejumlah spasi agar terlihat menjorok ke dalam, dan diikuti oleh deret angka menurun dari i ke 1. Bintang (*) akan digunakan sebagai pemisah, dan dilanjutkan kembali deret angka secara increment dari 1 ke i, sehingga meciptakan pola segitiga mirror.
 
 ## Kesimpulan
-...
+Dasar pemrograman C++ berpusat pada struktur program yang terdiri dari fungsi main() sebagai titik awal eksekusi dan penggunaan library melalui #include. Konsep fundamentalnya meliputi penggunaan variabel dengan tipe data spesifik (seperti int, float, char) untuk menyimpan nilai, konstanta untuk nilai tetap, dan struct untuk data yang lebih kompleks. Interaksi program dikelola melalui perintah cin (input) dan cout (output). Logika dan alur program dikendalikan oleh tiga pilar utama: operator untuk manipulasi data, pernyataan kondisional (if, switch) untuk pengambilan keputusan, dan struktur perulangan (for, while) untuk menjalankan tugas repetitif secara efisien
 
 ## Referensi
 [1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
 <br>[2] Indahyati, Uce., Rahmawati Yunianita. (2020). "BUKU AJAR ALGORITMA DAN PEMROGRAMAN DALAM BAHASA C++". Sidoarjo: Umsida Press. Diakses pada 10 Maret 2024 melalui https://doi.org/10.21070/2020/978-623-6833-67-4.
-<br>...
+<br>
