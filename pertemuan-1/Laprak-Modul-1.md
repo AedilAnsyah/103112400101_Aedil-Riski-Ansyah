@@ -20,26 +20,150 @@ Linked list atau yang disebut juga senarai berantai adalah Salah satu bentuk str
 
 ## Guided 
 
-### 1. ...
+### 1. Operator
 
 ```C++
-source code guided 1
+#include <iostream>
+using namespace std;
+
+int main() {
+    int angka1, angka2;
+    cout << "Masukkan angka1 : ";
+    cin >> angka1;
+    cout << "Masukkan angka2 : ";
+    cin >> angka2;
+    
+    // penjumlahan 
+    cout << "Penjumlahan: " << angka1 + angka2 << "\n";
+    // pengurangan
+    cout << "Pengurangan: " << angka1 - angka2 << "\n";
+    // perkalian
+    cout << "Perkalian: " << angka1 * angka2 << "\n";
+    // pembagian
+    cout << "Pembagian: " << angka1 / angka2 << "\n";
+    // Modulus
+    cout << "Modulus: " << angka1 % angka2 << "\n";
+    return 0;
+} 
 ```
 penjelasan singkat guided 1
 
-### 2. ...
+### 2. Percabangan
 
 ```C++
-source code guided 2
+#include <iostream>
+using namespace std;
+
+int main() {
+    int angka1, angka2;
+    cout << "Masukkan angka1 : ";
+    cin >> angka1;
+    cout << "Masukkan angka2 : ";
+    cin >> angka2;
+    
+    if (angka1 > angka2) {
+        cout << angka1 << " lebih besar dari " << angka2 << endl;
+    } else if (angka1 == angka2) {
+        cout << angka1 << " sama dengan " << angka2 << endl;
+    } else if (angka2 > angka1) {
+        cout << angka1 << " lebih kecil dari " << angka2 << endl;
+    }
+    if (angka1 != angka2) {
+        cout << angka1 << " tidak sama dengan " << angka2 << endl;
+    }
+}
 ```
 penjelasan singkat guided 2
 
-### 3. ...
+### 3. Perulangan For
 
 ```C++
-source code guided 3
+#include <iostream>
+using namespace std;
+
+int main() {
+    int angka1, angka2;
+    cout << "Masukkan angka: ";
+    cin >> angka1;
+
+    for (int i = 0; i < angka1; i++){
+        cout << i << " - ";
+    }
+
+    cout << endl;
+    for (int i = 20; i > angka1; i--){
+        cout << i << " - ";
+    }
+    cout << endl;
+    return 0;
+}
 ```
 penjelasan singkat guided 3
+
+### 4. Perulangan While
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    int angka1;
+    cout << "Masukkan angka: ";
+    cin >> angka1;
+
+    int i = 0;
+    int j = 11;
+
+    while (i < angka1) {
+        cout << i << " - ";
+        i++;
+    }
+
+    cout << endl;
+
+    do {
+        cout << j << " - ";
+        j++;
+    } while (j < angka1);
+
+    return 0;
+}
+```
+penjelasan singkat guided 4
+
+### 5. Struct
+
+```C++
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int jumlah = 5;
+
+    struct raport {
+        char nama[5];
+        int nilai;
+    };
+
+    raport siswa[jumlah] = {};
+
+    for (int i = 0; i < jumlah; i++) {
+        cout << " masukkan nama siswa : " << siswa[i].nama;
+        cin >> siswa[i].nama;
+        cout << " masukkan nilai siswa : ";
+        cin >> siswa[i].nilai;
+    }
+    int i = 0;
+    while (i < jumlah) {
+        cout << "Nama " << siswa[i].nama << endl;
+        cout << "Nilai " << siswa[i].nilai << endl;
+        i++;
+    }
+
+    return 0;
+}
+```
+penjelasan singkat guided 5
 
 ## Unguided 
 
@@ -77,7 +201,7 @@ int main() {
 ##### Output 2
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-1/output2-soal1-modul1.png)
 
-penjelasan unguided 1 
+Program ini merupakan program 
 
 ### 2. Buatlah sebuah program yang menerima masukan angka dan mengeluarkan output nilai angka tersebut dalam bentuk tulisan. Angka yang akan di- input-kan user adalah bilangan bulat positif mulai dari 0 s.d 100
 
