@@ -455,7 +455,7 @@ int main() {
 ##### Output 2
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-2/output2-soal3-modul2.png)
 
-##### Output 2
+##### Output 3
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-2/output3-soal3-modul2.png)
 
 Program ini merupakan aplikasi sederhana yang melakukan berbagai operasi pada sebuah array yang telah dibuat sebelumnya (arr). Program ini terdiri dari empat fungsi terpisah. Fungsi tampilan untuk mencetak isi array. Fungsi cariMax untuk menemukan nilai terbesar. Fungsi cariMin untuk menemukan nilai terkecil. Fungsi hitungAvg untuk menghitung rata-rata. Di dalam fungsi main, terdapat sebuah do-while loop yang digunakan untuk terus menampilkan menu kepada user, lalu sebuah switch-case akan memanggil fungsi yang sesuai berdasarkan pilihan input user sampai user memilih opsi keluar dari program 
