@@ -1,20 +1,41 @@
-# <h1 align="center">Laporan Praktikum Modul 1 - Codeblocks IDE & Pengenalan Bahas C++ (Bagian Pertama)</h1>
+# <h1 align="center">Laporan Praktikum Modul 2 - Pengenalan Bahasa C++ (Bagian Kedua)</h1>
 <p align="center">Aedil Riski Ansyah - 103112400101</p>
 
 ## Dasar Teori
-Bahasa C++ merupakan turunan dari bahasa C yang populer dan banyak dibutuhkan dalam dunia kerja [2]. Setiap program C++ memiliki struktur dasar yang terdiri dari fungsi utama int main() yang menjadi titik awal dan akhir eksekusi program [2]. Program umumnya menyertakan library atau file judul menggunakan perintah preprocessor #include <iostream> untuk dapat melakukan operasi input-output [2]. Setiap perintah atau statement di dalam C++ harus diakhiri dengan tanda titik koma (;) [2].
+### A. Array 
+Array adalah tipe data terstruktur yang terdiri dari kumpulan elemen dengan tipe data yang sama dan menggunakan satu nama variabel [1, 2]. Array bersifat homogen, artinya semua elemennya harus memiliki tipe data yang identik [1], dan bersifat statis, yang berarti alokasi memorinya memiliki batasan yang telah ditentukan [1]. Setiap elemen data dalam array dapat diakses secara acak melalui indeksnya, yang merupakan penanda posisi unik untuk setiap elemen, di mana elemen pertama selalu dimulai dari indeks 0 [2].
 
-Dalam C++, data disimpan dalam variabel, yaitu sebuah nama untuk lokasi di memori yang nilainya dapat berubah selama program berjalan [2]. Setiap variabel harus dideklarasikan dengan tipe data tertentu, seperti int untuk bilangan bulat, float atau real untuk bilangan desimal, dan char untuk karakter tunggal [2]. Nilai yang tidak berubah selama eksekusi program disebut konstanta dan didefinisikan menggunakan kata kunci const [2]. Untuk mengelompokkan beberapa variabel dengan tipe data yang mungkin berbeda menjadi satu kesatuan, digunakan tipe data bentukan yang disebut struktur atau struct [1, 2].
+Jenis-jenis array meliputi:
 
-Interaksi dengan pengguna dilakukan melalui perintah input dan output. Perintah cout digunakan untuk menampilkan data ke layar (output), sedangkan cin digunakan untuk menerima masukan dari keyboard (input) [2].
+* Array Satu Dimensi: Dikenal juga sebagai vektor, ini adalah bentuk array paling dasar yang terdiri dari satu larik data saja [1, 2]. Deklarasinya adalah tipe_data nama_var[ukuran]; [2].
 
-Logika program dibangun menggunakan operator, kondisional, dan perulangan.
+* Array Dua Dimensi: Sering diibaratkan seperti matriks atau tabel, karena terdiri dari baris dan kolom yang diakses menggunakan dua indeks [1, 2]. Deklarasinya adalah tipe_data nama_array[jumlah_baris][jumlah_kolom]; [2].
 
-* Operator adalah simbol untuk melakukan operasi, seperti operator aritmatika (+, -, *, /, %), operator relasional atau perbandingan (<, >, ==), dan operator logika (and, or) [2].
+* Array Multi-Dimensi: Merupakan array yang memiliki lebih dari dua indeks, digunakan untuk merepresentasikan data dalam ruang yang lebih kompleks [1, 2].
 
-* Kondisional digunakan untuk pengambilan keputusan. Pernyataan if-else digunakan untuk memilih satu dari dua blok kode berdasarkan suatu kondisi, sedangkan switch-case digunakan untuk memilih dari banyak blok kode alternatif [2].
+### B. Pointer
+Semua data program disimpan dalam memori komputer (RAM), di mana setiap sel memori memiliki alamat yang unik [2]. Pointer adalah variabel khusus yang tidak berisi nilai data, melainkan menyimpan alamat memori dari variabel lain [2]. Dengan menunjuk ke alamat variabel lain, pointer dapat mengakses dan memanipulasi nilai dari variabel tersebut [2].
 
-* Perulangan (looping) digunakan untuk menjalankan blok kode berulang kali. Struktur perulangan yang umum adalah for, while, dan do-while (atau repeat-until) [2].
+Pointer dideklarasikan dengan menambahkan tanda asteris (*) sebelum nama variabel, seperti tipe_data *nama_pointer; [2]. Ada dua operator penting yang digunakan bersama pointer:
+
+* Operator Address-Of (&): Disebut juga operator dereference, digunakan untuk mendapatkan alamat memori dari suatu variabel [2].
+
+* Operator Reference (*): Digunakan untuk mengakses nilai yang ada di alamat memori yang ditunjuk oleh pointer [2].
+
+Terdapat hubungan yang erat antara pointer dan array, di mana nama sebuah array pada dasarnya berfungsi sebagai pointer yang menunjuk ke elemen pertamanya [2].
+
+### C. Fungsi dan Prosedur
+Fungsi adalah blok kode terstruktur yang dirancang untuk melakukan tugas spesifik, memungkinkan program dipecah menjadi modul-modul yang lebih kecil dan mudah dikelola [2]. Pendekatan ini disebut pemrograman modular dan mendukung metode divide-and-conquer [2]. Setiap program C++ minimal memiliki satu fungsi, yaitu main(), yang menjadi titik awal dan akhir eksekusi program [2].
+
+Di C++, prosedur dikenal sebagai fungsi void, yaitu fungsi yang melakukan tugas tertentu tetapi tidak mengembalikan nilai (return value) [2]. Sebaliknya, fungsi yang mengembalikan nilai harus mendeklarasikan tipe data dari nilai yang akan dikembalikan [2].
+
+Parameter atau masukan dapat dilewatkan ke fungsi melalui beberapa cara:
+
+* Pemanggilan dengan Nilai (Call by Value): Metode ini menyalin nilai dari parameter aktual ke parameter formal. Perubahan yang terjadi pada parameter di dalam fungsi tidak akan memengaruhi variabel aslinya di luar fungsi [2].
+
+* Pemanggilan dengan Pointer (Call by Pointer): Dengan melewatkan alamat memori dari variabel aktual, fungsi dapat secara langsung mengubah nilai dari variabel asli tersebut [2].
+
+* Pemanggilan dengan Referensi (Call by Reference): Serupa dengan call by pointer, metode ini juga melewatkan alamat variabel, sehingga memungkinkan modifikasi nilai variabel asli, namun dengan sintaks pemanggilan yang lebih sederhana [2].
 
 ## Guided 
 
@@ -39,7 +60,7 @@ int main() {
     return 0;
 } 
 ```
-Program ini akan menerima input dua buah integer (angka1 dan angka2) kemudian menghitung hasil penjumlahan, pengurangan, perkalian, pembagian dan modulus dari dua bilangan tersebut. Untuk pembagian hasilnya akan dibulatkan ke bawah.
+Program ini menunjukkan operasi dasar dan output dari sebuah sebuah array di C++. Program mendeklarasikan array integer (arr) dengan ukuran lima. Kemudian for-loop digunakan untuk meminta user memasukkan lima nilai, setiap nilai yang diinput akan disimpan secara berurutan dalam setiap indeks array. Setelah semua indeks terisi, program menggunakan while-loop untuk menampilkan isi dari setiap indeks array tersebut ke layar (dari indeks 0-4). 
 
 ### 2. Array 2 Dimensi
 
@@ -95,7 +116,7 @@ int main() {
     return 0;
 }
 ```
-Program ini merupakan program untuk membandingkan dua integer (angka1 dan angka2). Program ini akan membandingkan apakah angka1 lebih besar, sama dengan, atau lebih kecil dari angka2 menggunakan percabangan if-else if. Setelah itu program juga akan mengecek apakah kedua angka tidak sama (!=).
+Program ini menunjukkan operasi penjumlahan dan perkalian matriks 2x2. Program ini membuat dua matriks awal (arrA dan arrB), lalu melakukan dua operasi terpisah. Pertama, menjumlahkan kedua matriks secara elemen per elemen dan menyimpan hasilnya di arrC. Kedua, mengalikan kedua matriks menggunakan algoritma perkalian matriks dan menyimpan hasilnya di arrD. Terdapat sebuah fungsi bernama tampilkanHasil yang digunakan untuk mencetak matriks hasil penjumlahan dan perkalian tersebut ke layar dengan format yang lebih rapih.
 
 ### 3. Function Procedure
 
@@ -141,7 +162,7 @@ int main() {
     return 0;
 }
 ```
-Program ini adalah program yang memasukkan sebuah integer (angka1) kemudian dilakukan dua proses for-loop secara terpisah. For-loop pertama akan mencetak angka dari 0 hingga satu angka sebelum angka1 (increment). For-loop kedua akan mencetak bilangan menurun dari 20 hingga satu angka setelah angka1.
+Program ini menunjukkan penggunaan fungsi untuk melakukan beberapa operasi pada sebuah array integer yang diisi oleh user. Awalnya user akan diminta untuk memasukkan lima nilai ke dalam array. Selanjutnya program akan memanggil fungsi cariMax yang akan mencari nilai maksimum dari semua elemem array, lalu hasilnya dicetak. Terakhir, program akan memanggil prosedur operasiAritmatika yang menghitung total penjumlahan dan perkalian lalu menampilkannya.
 
 ### 4. Pointer
 
@@ -173,7 +194,7 @@ int main() {
     return 0;
 }
 ```
-Program ini menunjukkan perbedaan while-loop dan do-while-loop menggunakan input angka1. While-loop akan mencetak angka secara increment mulai dari 0, namun hal ini hanya berjalan jika angka1 memenuhi sebuah kondisi (i < angka1). Sedangkan do-while-loop akan mencetak angka secara increment mulai dari 11 dengan perbedaan bahwa kodenya minimal akan dijalankan satu kali sebelum kondisinya (i < angka1) diperiksa di akhir. Hal ini menyebabkan do-while-loop setidaknya akan mencetak angka 11, bahkan jika kondisi angka1 tidak terpenuhi.
+Program ini menunjukkan penggunaan pointer di C++. Program utama pertama-tama menunjukkan bagaimana sebuah pointer (ptr) menyimpan alamat memori dari variabel a, dan cara mengakses nilai variabel tersebut melalui pointernya. Kemudian, program memanggil fungsi tukar dengan mengirimkan alamat memori dari variabel a dan b. Fungsi tukar ini menggunakan parameter pointer untuk secara langsung menukar nilai asli dari kedua variabel tersebut. 
 
 ### 5. Reference
 
@@ -209,7 +230,7 @@ int main() {
     return 0;
 }
 ```
-Program ini menunjukkan penggunaan struct untuk membuat tipe data khusus raport yang menyimpan nilai dan nama. Program kemudian mendeklarasikan array bernama siswa untuk menampumg data raport dari lima siswa. Menggunakan for-loop, user diminta untuk memasukkan data nama dan nilai dari lima siswa tersebut. Setelah semua data tersimpan di array, while-loop digunakan untuk menampilkan data kelima mahasiswa tersebut.
+Program ini menunjukkan penggunaan reference di C++. Di dalam main, sebuah reference (ref) dibuat sebagai alias untuk variabel a, dan program menunjukkan bahwa keduanya berbagi nilai dan alamat memori yang sama, serta membuktikan bahwa mengubah nilai melalui ref juga akan mengubah nilai a. 
 
 ## Unguided 
 
@@ -276,7 +297,7 @@ int main() {
 ##### Output 1
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-2/output1-soal1-modul2.png)
 
-Program ini merupakan program kalkulator sederhana yang inputnya berupa dua bilangan bertipe double (desimal) yaitu a dan b. Program meminta pengguna memasukkan angka a dan b kemudian menghitung hasil penjumlahan, pengurangan, perkalian dan pembagian dua bilangan tersebut. Outputnya berupa bilangan desimal dengan dua angka dibelakang koma. Program ini juga menggunakan if-else untuk mengantisipasi hasil pembagian yang tidak terdefinisi (b = 0).
+Program ini merupakan program untuk melakukan tiga operasi dasar (penjumlahan, pengurangan dan perkalian) pada dua matriks 3x3 yang telah dibuat sebelumnya (mtx1 dan mtx2). Program ini menggunakan sebuah fungsi tampilan untuk mencetak matriks hasil dengan rapi. Alur kerjanya adalah menghitung hasil setiap operasi secara berurutan, menyimpannya dalam matriks hasil, lalu langsung memanggil fungsi tampilan untuk menunjukkan hasilnya sebelum melanjutkan ke operasi berikutnya. 
 
 ### 2. Berdasarkan guided pointer dan reference sebelumnya, buatlah keduanya dapat menukar nilai dari 3 variabel
 
@@ -340,7 +361,7 @@ int main() {
 ##### Output Reference
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-2/output2-soal2-modul2.png)
 
-Program ini adalah program yang mengkonversi dari angka ke tulisan untuk rentang angka 0 sampai 100. Program ini menggunakan fungsi satuan untuk mengubah digit 1-9 menjadi sebuah teks. Dalam fungsi main, input dari pengguna akan divalidasi untuk memastikan rentang angkanya sesuai dengan yang diharapkan, setelah itu program akan menggunakan if-else if untuk menentukan kategori angka seperti satuan, puluhan dan belasan. Program ini juga mengantisipasi angka khusus seperti nol, sepuluh, sebelas, dan seratus. Untuk puluhan program akan memecah angka menjadi satuan dan puluhan untuk merangkai nama bilangan yang benar.
+Kedua program ini menunjukkan cara kerja fungsi yang sama (menukar nilai tiga variabel, b ke a, c ke b, a ke c) tetapi menggunakan dua metode yang berbeda. Program pertama menggunakan fungsi tukarP yang menerima parameter berupa pointer, sehingga saat memanggilnya, kita harus mengirimkan alamat memori dari variabel (&a, &b, &c). Program kedua menggunakan fungsi tukarR yang menerima parameter berupa reference, yang memungkinkan pemanggilan fungsi dilakukan dengan mengirimkan variabelnya secara langsung (a, b, c), meskipun pada dasarnya fungsi tetap memodifikasi nilai variabel aslinya.
 
 ### 3. Diketahui sebuah array 1 dimensi sebagai berikut : 
 ### arrA = {11, 8, 5, 7, 12, 26, 3, 54, 33, 55}
@@ -437,10 +458,10 @@ int main() {
 ##### Output 2
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-2/output3-soal3-modul2.png)
 
-Program ini adalah program untuk mencetak segitiga sama sisi terbalik dan berisi angka. Setelah meminta integer (n), program menggunakan for-loop utama secara decrement dari n hingga 0 untuk membuat setiap baris. Di setiap baris, program mencetak sejumlah spasi agar terlihat menjorok ke dalam, dan diikuti oleh deret angka menurun dari i ke 1. Bintang (*) akan digunakan sebagai pemisah, dan dilanjutkan kembali deret angka secara increment dari 1 ke i, sehingga meciptakan pola segitiga mirror.
+Program ini merupakan aplikasi sederhana yang melakukan berbagai operasi pada sebuah array yang telah dibuat sebelumnya (arr). Program ini terdiri dari empat fungsi terpisah. Fungsi tampilan untuk mencetak isi array. Fungsi cariMax untuk menemukan nilai terbesar. Fungsi cariMin untuk menemukan nilai terkecil. Fungsi hitungAvg untuk menghitung rata-rata. Di dalam fungsi main, terdapat sebuah do-while loop yang digunakan untuk terus menampilkan menu kepada user, lalu sebuah switch-case akan memanggil fungsi yang sesuai berdasarkan pilihan input user sampai user memilih opsi keluar dari program 
 
 ## Kesimpulan
-Dasar pemrograman C++ berpusat pada struktur program yang terdiri dari fungsi main() sebagai titik awal eksekusi dan penggunaan library melalui #include. Konsep fundamentalnya meliputi penggunaan variabel dengan tipe data spesifik (seperti int, float, char) untuk menyimpan nilai, konstanta untuk nilai tetap, dan struct untuk data yang lebih kompleks. Interaksi program dikelola melalui perintah cin (input) dan cout (output). Logika dan alur program dikendalikan oleh tiga pilar utama: operator untuk manipulasi data, pernyataan kondisional (if, switch) untuk pengambilan keputusan, dan struktur perulangan (for, while) untuk menjalankan tugas repetitif secara efisien
+Perumusan dasar teori C++ berpusat pada tiga konsep fundamental yaitu array sebagai struktur data untuk koleksi nilai sejenis, pointer untuk manipulasi alamat memori secara langsung, dan fungsi sebagai pilar pemrograman modular, dengan penekanan pada metode pemanggilan parameter seperti call-by-pointer dan call-by-reference. Penerapan praktis dari prinsip-prinsip ini kemudian didemonstrasikan melalui analisis serangkaian kode C++. Contoh-contoh tersebut mengilustrasikan spektrum implementasi dari operasi dasar seperti input-output array, kalkulasi matriks, hingga perbandingan fungsional antara pointer dan referensi. Puncaknya, analisis ini mengarah pada pemahaman sebuah program menu interaktif yang utuh, yang secara efektif mengintegrasikan semua konsep yang telah dibahas, fungsi, dan struktur kontrol untuk menciptakan sebuah aplikasi fungsional.
 
 ## Referensi
 [1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
