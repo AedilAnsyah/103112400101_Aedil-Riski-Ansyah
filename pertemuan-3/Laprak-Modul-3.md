@@ -2,44 +2,15 @@
 <p align="center">Aedil Riski Ansyah - 103112400101</p>
 
 ## Dasar Teori
-### A. Array 
-Array adalah tipe data terstruktur yang terdiri dari kumpulan elemen dengan tipe data yang sama dan menggunakan satu nama variabel [1, 2]. Array bersifat homogen, artinya semua elemennya harus memiliki tipe data yang identik [1], dan bersifat statis, yang berarti alokasi memorinya memiliki batasan yang telah ditentukan [1]. Setiap elemen data dalam array dapat diakses secara acak melalui indeksnya, yang merupakan penanda posisi unik untuk setiap elemen, di mana elemen pertama selalu dimulai dari indeks 0 [2].
+Abstract Data Type (ADT) atau Tipe Data Abstrak adalah model matematis dari objek data yang disempurnakan dengan cara mengaitkannya dengan fungsi-fungsi yang beroperasi pada data yang bersangkutan [1]. Secara mendasar, ADT merupakan tipe data yang didefinisikan oleh pemrogram untuk mempermudah proses pemrograman serta mengakomodasi tipe-tipe data yang tidak disediakan secara spesifik oleh bahasa pemrograman yang digunakan [1]. Konsep ini memisahkan struktur penyimpanan dari perilaku tipe data yang abstrak, seperti tumpukan (Stack) atau antrian (Queue) [1]. Sebuah ADT tidak hanya menunjukkan bagaimana data diorganisir, tetapi juga mencakup operasi-operasi yang dapat dilakukan terhadap struktur data tersebut [1]. Dengan demikian, implementasi ADT dapat dipandang sebagai gabungan antara struktur data dengan operasi-operasi yang berlaku padanya [1].
 
-Jenis-jenis array meliputi:
+Penggunaan ADT menawarkan keuntungan signifikan dalam pengembangan sistem yang bersifat modular, memungkinkan suatu sistem dikembangkan oleh beberapa orang anggota tim secara terpisah dengan tetap menjaga keterpaduan [1]. Hal ini dimungkinkan karena pemrogram yang menggunakan ADT tidak perlu mengetahui bagaimana detail implementasi internalnya [1]. Jika terjadi perubahan pada implementasi, program pengguna tidak akan terpengaruh secara keseluruhan, asalkan antarmuka ADT dengan "dunia luar" tetap dipertahankan [1]. ADT memperluas konsep User Defined Type (UDT) dengan menambahkan prinsip enkapsulasi, yang berarti ADT berisi sifat-sifat dan operasi-operasi yang bisa dilakukan terhadap kelas tersebut [1].
 
-* Array Satu Dimensi: Dikenal juga sebagai vektor, ini adalah bentuk array paling dasar yang terdiri dari satu larik data saja [1, 2]. Deklarasinya adalah tipe_data nama_var[ukuran]; [2].
-
-* Array Dua Dimensi: Sering diibaratkan seperti matriks atau tabel, karena terdiri dari baris dan kolom yang diakses menggunakan dua indeks [1, 2]. Deklarasinya adalah tipe_data nama_array[jumlah_baris][jumlah_kolom]; [2].
-
-* Array Multi-Dimensi: Merupakan array yang memiliki lebih dari dua indeks, digunakan untuk merepresentasikan data dalam ruang yang lebih kompleks [1, 2].
-
-### B. Pointer
-Semua data program disimpan dalam memori komputer (RAM), di mana setiap sel memori memiliki alamat yang unik [2]. Pointer adalah variabel khusus yang tidak berisi nilai data, melainkan menyimpan alamat memori dari variabel lain [2]. Dengan menunjuk ke alamat variabel lain, pointer dapat mengakses dan memanipulasi nilai dari variabel tersebut [2].
-
-Pointer dideklarasikan dengan menambahkan tanda asteris (*) sebelum nama variabel, seperti tipe_data *nama_pointer; [2]. Ada dua operator penting yang digunakan bersama pointer:
-
-* Operator Address-Of (&): Disebut juga operator dereference, digunakan untuk mendapatkan alamat memori dari suatu variabel [2].
-
-* Operator Reference (*): Digunakan untuk mengakses nilai yang ada di alamat memori yang ditunjuk oleh pointer [2].
-
-Terdapat hubungan yang erat antara pointer dan array, di mana nama sebuah array pada dasarnya berfungsi sebagai pointer yang menunjuk ke elemen pertamanya [2].
-
-### C. Fungsi dan Prosedur
-Fungsi adalah blok kode terstruktur yang dirancang untuk melakukan tugas spesifik, memungkinkan program dipecah menjadi modul-modul yang lebih kecil dan mudah dikelola [2]. Pendekatan ini disebut pemrograman modular dan mendukung metode divide-and-conquer [2]. Setiap program C++ minimal memiliki satu fungsi, yaitu main(), yang menjadi titik awal dan akhir eksekusi program [2].
-
-Di C++, prosedur dikenal sebagai fungsi void, yaitu fungsi yang melakukan tugas tertentu tetapi tidak mengembalikan nilai (return value) [2]. Sebaliknya, fungsi yang mengembalikan nilai harus mendeklarasikan tipe data dari nilai yang akan dikembalikan [2].
-
-Parameter atau masukan dapat dilewatkan ke fungsi melalui beberapa cara:
-
-* Pemanggilan dengan Nilai (Call by Value): Metode ini menyalin nilai dari parameter aktual ke parameter formal. Perubahan yang terjadi pada parameter di dalam fungsi tidak akan memengaruhi variabel aslinya di luar fungsi [2].
-
-* Pemanggilan dengan Pointer (Call by Pointer): Dengan melewatkan alamat memori dari variabel aktual, fungsi dapat secara langsung mengubah nilai dari variabel asli tersebut [2].
-
-* Pemanggilan dengan Referensi (Call by Reference): Serupa dengan call by pointer, metode ini juga melewatkan alamat variabel, sehingga memungkinkan modifikasi nilai variabel asli, namun dengan sintaks pemanggilan yang lebih sederhana [2].
+Dalam praktiknya, ADT diwujudkan melalui tipe data bentukan yang didefinisikan oleh pengguna (user defined data type) [1, 2]. Bahasa pemrograman C++ menyediakan mekanisme untuk ini, salah satunya melalui kata kunci struct [1, 2]. Struct adalah tipe data bentukan yang berisi kumpulan variabel yang bernaung dalam satu nama yang sama dan memiliki kaitan satu sama lain [1]. Berbeda dengan array, struct bisa memiliki variabel-variabel dengan tipe data yang berbeda [1]. Selain itu, kata kunci typedef dapat digunakan untuk membuat nama tipe data baru dari tipe data yang sudah ada, sehingga mempermudah deklarasi dalam program [1].
 
 ## Guided 
 
-### 1. List
+### 1. Pelajaran
 
 pelajaran.h
 ```C++
@@ -98,8 +69,7 @@ int main() {
 }
 ```
 
-
-Program ini menunjukkan operasi dasar dan output dari sebuah sebuah array di C++. Program mendeklarasikan array integer (arr) dengan ukuran lima. Kemudian for-loop digunakan untuk meminta user memasukkan lima nilai, setiap nilai yang diinput akan disimpan secara berurutan dalam setiap indeks array. Setelah semua indeks terisi, program menggunakan while-loop untuk menampilkan isi dari setiap indeks array tersebut ke layar (dari indeks 0-4). 
+Program ini adalah sebuah contoh penerapan konsep ADT dalam C++ untuk mengelola data mata pelajaran secara terorganisir. ADT ini dipecah menjadi tiga file: pelajaran.h yang berfungsi sebagai kerangka untuk mendefinisikan struktur pelajaran dan mendeklarasikan fungsi-fungsinya, pelajaran.cpp yang berisi implementasi atau logika kerja dari fungsi-fungsi tersebut, dan main.cpp yang bertindak sebagai program utama. Pada intinya, program utama menggunakan ADT ini untuk membuat sebuah data pelajaran "Struktur Data" dengan memanggil fungsi create_pelajaran dan kemudian menampilkannya menggunakan tampil_pelajaran.
 
 
 ## Unguided 
@@ -195,9 +165,10 @@ int main() {
 ##### Output 1
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/output1-soal1-modul3.png)
 
-Program ini merupakan program untuk melakukan tiga operasi dasar (penjumlahan, pengurangan dan perkalian) pada dua matriks 3x3 yang telah dibuat sebelumnya (mtx1 dan mtx2). Program ini menggunakan sebuah fungsi tampilan untuk mencetak matriks hasil dengan rapi. Alur kerjanya adalah menghitung hasil setiap operasi secara berurutan, menyimpannya dalam matriks hasil, lalu langsung memanggil fungsi tampilan untuk menunjukkan hasilnya sebelum melanjutkan ke operasi berikutnya. 
+Program ini adalah contoh penerapan konsep ADT untuk mengelola data akademik mahasiswa secara terstruktur. Kode dipecah menjadi tiga file: mahasiswa.h yang berfungsi sebagai interface yang mendefinisikan struct Mahasiswa dan mendeklarasikan fungsi untuk input data, perhitungan nilai akhir, serta penampilan data. File mahasiswa.cpp kemudian menyediakan implementasi atau logika kerja dari fungsi-fungsi tersebut, termasuk rumus perhitungan nilai akhir dari komponen UTS, UAS, dan tugas. Terakhir, main.cpp bertindak sebagai program utama yang menggunakan ADT ini untuk membuat sebuah array mahasiswa, memanggil fungsi untuk mengisi data dari input pengguna, dan kemudian menampilkan kembali seluruh data yang telah diproses ke layar. 
 
-### 2. ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/modul3-soal2.png)
+### 2. Soal 2
+![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/modul3-soal2.png)
 
 pelajaran.h
 ```C++
@@ -256,7 +227,7 @@ int main() {
 ##### Output 1
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/output1-soal2-modul3.png)
 
-Kedua program ini menunjukkan cara kerja fungsi yang sama (menukar nilai tiga variabel, b ke a, c ke b, a ke c) tetapi menggunakan dua metode yang berbeda. Program pertama menggunakan fungsi tukarP yang menerima parameter berupa pointer, sehingga saat memanggilnya, kita harus mengirimkan alamat memori dari variabel (&a, &b, &c). Program kedua menggunakan fungsi tukarR yang menerima parameter berupa reference, yang memungkinkan pemanggilan fungsi dilakukan dengan mengirimkan variabelnya secara langsung (a, b, c), meskipun pada dasarnya fungsi tetap memodifikasi nilai variabel aslinya.
+Program ini adalah sebuah contoh penerapan konsep ADT untuk mengelola data mata pelajaran secara terstruktur. Kode dipecah menjadi tiga file: pelajaran.h yang berfungsi sebagai interface yang mendefinisikan struct pelajaran dan mendeklarasikan fungsi-fungsinya. File pelajaran.cpp menyediakan implementasi atau logika kerja dari fungsi-fungsi tersebut. Terakhir, main.cpp bertindak sebagai program utama yang menggunakan ADT ini untuk membuat sebuah data pelajaran "Struktur Data" dengan memanggil create_pelajaran dan kemudian menampilkannya ke layar menggunakan tampil_pelajaran.
 
 ### 3. Buatlah program dengan ketentuan :
 - 2 buah array 2D integer berukuran 3x3 dan 2 buah pointer integer
@@ -374,10 +345,10 @@ int main() {
 ##### Output 2
 ![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/output2-soal3-modul3.png)
 
-Program ini merupakan aplikasi sederhana yang melakukan berbagai operasi pada sebuah array yang telah dibuat sebelumnya (arr). Program ini terdiri dari empat fungsi terpisah. Fungsi tampilan untuk mencetak isi array. Fungsi cariMax untuk menemukan nilai terbesar. Fungsi cariMin untuk menemukan nilai terkecil. Fungsi hitungAvg untuk menghitung rata-rata. Di dalam fungsi main, terdapat sebuah do-while loop yang digunakan untuk terus menampilkan menu kepada user, lalu sebuah switch-case akan memanggil fungsi yang sesuai berdasarkan pilihan input user sampai user memilih opsi keluar dari program 
+Program ini adalah contoh penerapan konsep ADT untuk melakukan operasi pada matriks 3x3 dan pointer. Kode dipecah menjadi tiga file: matriks.h yang mendefinisikan struct Matriks3x3 dan mendeklarasikan fungsi-fungsi untuk menampilkan matriks, menukar elemen matriks, dan menukar nilai pointer. File matriks.cpp berisi implementasi atau logika kerja dari ketiga fungsi tersebut. Terakhir, main.cpp bertindak sebagai program utama yang menggunakan ADT ini untuk menginisialisasi dua buah matriks dan dua pointer, kemudian memanggil fungsi-fungsi yang tersedia untuk mendemonstrasikan proses penukaran elemen matriks pada posisi tertentu serta penukaran nilai yang ditunjuk oleh pointer, lalu menampilkan hasilnya ke layar.
 
 ## Kesimpulan
-Perumusan dasar teori C++ berpusat pada tiga konsep fundamental yaitu array sebagai struktur data untuk koleksi nilai sejenis, pointer untuk manipulasi alamat memori secara langsung, dan fungsi sebagai pilar pemrograman modular, dengan penekanan pada metode pemanggilan parameter seperti call-by-pointer dan call-by-reference. Penerapan praktis dari prinsip-prinsip ini kemudian didemonstrasikan melalui analisis serangkaian kode C++. Contoh-contoh tersebut mengilustrasikan spektrum implementasi dari operasi dasar seperti input-output array, kalkulasi matriks, hingga perbandingan fungsional antara pointer dan referensi. Puncaknya, analisis ini mengarah pada pemahaman sebuah program menu interaktif yang utuh, yang secara efektif mengintegrasikan semua konsep yang telah dibahas, fungsi, dan struktur kontrol untuk menciptakan sebuah aplikasi fungsional.
+Abstract Data Type (ADT) merupakan konsep fundamental dalam pemrograman yang menekankan enkapsulasi, yaitu menggabungkan struktur data (seperti struct untuk Mahasiswa, pelajaran, atau Matriks) dengan operasi-operasi (fungsi) yang memanipulasinya ke dalam satu unit logis. Praktik ini secara efektif memisahkan antarmuka atau spesifikasi (dideklarasikan dalam file header .h) dari implementasi atau detail kode (didefinisikan dalam file .cpp). Dengan demikian, program utama (main.cpp) dapat menggunakan ADT sebagai "komponen" siap pakai tanpa perlu mengetahui kerumitan internalnya, sehingga menghasilkan kode yang lebih terstruktur, modular, mudah dikelola, dan dapat digunakan kembali (reusable).
 
 ## Referensi
 [1] Triase. (2020). Diktat Edisi Revisi : STRUKTUR DATA. Medan: UNIVERSTAS ISLAM NEGERI SUMATERA UTARA MEDAN. 
