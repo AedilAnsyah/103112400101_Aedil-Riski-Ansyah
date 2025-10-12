@@ -193,7 +193,7 @@ int main() {
 ### Output Unguided 1 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-2/output1-soal1-modul3.png)
+![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/output1-soal1-modul3.png)
 
 Program ini merupakan program untuk melakukan tiga operasi dasar (penjumlahan, pengurangan dan perkalian) pada dua matriks 3x3 yang telah dibuat sebelumnya (mtx1 dan mtx2). Program ini menggunakan sebuah fungsi tampilan untuk mencetak matriks hasil dengan rapi. Alur kerjanya adalah menghitung hasil setiap operasi secara berurutan, menyimpannya dalam matriks hasil, lalu langsung memanggil fungsi tampilan untuk menunjukkan hasilnya sebelum melanjutkan ke operasi berikutnya. 
 
@@ -254,7 +254,7 @@ int main() {
 ### Output Unguided 2 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-2/output1-soal2-modul3.png)
+![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/output1-soal2-modul3.png)
 
 Kedua program ini menunjukkan cara kerja fungsi yang sama (menukar nilai tiga variabel, b ke a, c ke b, a ke c) tetapi menggunakan dua metode yang berbeda. Program pertama menggunakan fungsi tukarP yang menerima parameter berupa pointer, sehingga saat memanggilnya, kita harus mengirimkan alamat memori dari variabel (&a, &b, &c). Program kedua menggunakan fungsi tukarR yang menerima parameter berupa reference, yang memungkinkan pemanggilan fungsi dilakukan dengan mengirimkan variabelnya secara langsung (a, b, c), meskipun pada dasarnya fungsi tetap memodifikasi nilai variabel aslinya.
 
@@ -369,10 +369,10 @@ int main() {
 ### Output Unguided 3 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-2/output1-soal3-modul3.png)
+![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/output1-soal3-modul3.png)
 
 ##### Output 2
-![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-2/output2-soal3-modul3.png)
+![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/output2-soal3-modul3.png)
 
 Program ini merupakan aplikasi sederhana yang melakukan berbagai operasi pada sebuah array yang telah dibuat sebelumnya (arr). Program ini terdiri dari empat fungsi terpisah. Fungsi tampilan untuk mencetak isi array. Fungsi cariMax untuk menemukan nilai terbesar. Fungsi cariMin untuk menemukan nilai terkecil. Fungsi hitungAvg untuk menghitung rata-rata. Di dalam fungsi main, terdapat sebuah do-while loop yang digunakan untuk terus menampilkan menu kepada user, lalu sebuah switch-case akan memanggil fungsi yang sesuai berdasarkan pilihan input user sampai user memilih opsi keluar dari program 
 
