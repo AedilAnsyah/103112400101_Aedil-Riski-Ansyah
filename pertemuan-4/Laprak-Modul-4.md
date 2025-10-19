@@ -747,7 +747,7 @@ int main() {
 ### Output Unguided 2 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-4/output1-soal2-modul3.png)
+![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-4/output1-soal2-modul4.png)
 
 Program ini adalah sebuah contoh penerapan konsep ADT untuk mengelola data mata pelajaran secara terstruktur. Kode dipecah menjadi tiga file: pelajaran.h yang berfungsi sebagai interface yang mendefinisikan struct pelajaran dan mendeklarasikan fungsi-fungsinya. File pelajaran.cpp menyediakan implementasi atau logika kerja dari fungsi-fungsi tersebut. Terakhir, main.cpp bertindak sebagai program utama yang menggunakan ADT ini untuk membuat sebuah data pelajaran "Struktur Data" dengan memanggil create_pelajaran dan kemudian menampilkannya ke layar menggunakan tampil_pelajaran.
 
