@@ -462,11 +462,11 @@ Program ini adalah sebuah contoh penerapan konsep ADT dalam C++ untuk mengelola 
 ## Unguided 
 
 ### 1. Buatlah ADT Singly Linked list sebagai berikut di dalam file "Singlylist.h":
-![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/modul4-soal1-1.png)
+![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-4/modul4-soal1-1.png)
 ### Kemudian buat implementasi ADT Singly Linked list pada file "Singlylist.cpp". Adapun isi data
-![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/modul4-soal1-2.png)
+![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-4/modul4-soal1-2.png)
 ### Cobalah hasil implementasi ADT pada file "main.cpp"
-![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/modul4-soal1-3.png)
+![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-4/modul4-soal1-3.png)
 
 Singlylist.h
 ```C++
@@ -564,7 +564,7 @@ int main() {
 Program ini adalah contoh penerapan konsep ADT untuk mengelola data akademik mahasiswa secara terstruktur. Kode dipecah menjadi tiga file: mahasiswa.h yang berfungsi sebagai interface yang mendefinisikan struct Mahasiswa dan mendeklarasikan fungsi untuk input data, perhitungan nilai akhir, serta penampilan data. File mahasiswa.cpp kemudian menyediakan implementasi atau logika kerja dari fungsi-fungsi tersebut, termasuk rumus perhitungan nilai akhir dari komponen UTS, UAS, dan tugas. Terakhir, main.cpp bertindak sebagai program utama yang menggunakan ADT ini untuk membuat sebuah array mahasiswa, memanggil fungsi untuk mengisi data dari input pengguna, dan kemudian menampilkan kembali seluruh data yang telah diproses ke layar. 
 
 ### 2. Dari soal Latihan pertama, lakukan penghapusan node 9 menggunakan deleteFirst(), node 2 menggunakan deleteLast(), dan node 8 menggunakan deleteAfter(). Kemudian tampilkan jumlah node yang tersimpan menggunakan nbList() dan lakukan penghapusan seluruh node menggunakan deleteList(). Output yang diharapkan :
-![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/modul4-soal2.png)
+![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-4/modul4-soal2.png)
 
 Singlylist.h
 ```C++
@@ -747,7 +747,7 @@ int main() {
 ### Output Unguided 2 :
 
 ##### Output 1
-![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-3/output1-soal2-modul3.png)
+![Screenshot Output Unguided 1_1](https://github.com/AedilAnsyah/103112400101_Aedil-Riski-Ansyah/blob/main/pertemuan-4/output1-soal2-modul3.png)
 
 Program ini adalah sebuah contoh penerapan konsep ADT untuk mengelola data mata pelajaran secara terstruktur. Kode dipecah menjadi tiga file: pelajaran.h yang berfungsi sebagai interface yang mendefinisikan struct pelajaran dan mendeklarasikan fungsi-fungsinya. File pelajaran.cpp menyediakan implementasi atau logika kerja dari fungsi-fungsi tersebut. Terakhir, main.cpp bertindak sebagai program utama yang menggunakan ADT ini untuk membuat sebuah data pelajaran "Struktur Data" dengan memanggil create_pelajaran dan kemudian menampilkannya ke layar menggunakan tampil_pelajaran.
 
