@@ -1,0 +1,63 @@
+#include "bstree2.h"
+#include <iostream>
+
+using namespace std;
+
+
+address alokasi(infotype x) {
+    address newNode = new Node;
+    newNode->info = x;
+    newNode->left = Nil;
+    newNode->right = Nil;
+    return newNode;
+}
+
+void insertNode(address &root, infotype x) {
+    if (root == Nil) {
+        root = alokasi(x);
+    } else {
+        if (x < root->info) {
+            insertNode(root->left, x);
+        } else if (x > root->info) {
+            insertNode(root->right, x);
+        }
+    }
+}
+
+void printInorder(address root) {
+    if (root != Nil) {
+        printInorder(root->left);
+        cout << root->info << " - ";
+        printInorder(root->right);
+    }
+}
+
+int hitungJumlahNode(address root) {
+    if (root == Nil) {
+        return 0;
+    }
+    return 1 + hitungJumlahNode(root->left) + hitungJumlahNode(root->right);
+}
+
+int hitungTotalInfo(address root) {
+    if (root == Nil) {
+        return 0;
+    }
+    return root->info + hitungTotalInfo(root->left) + hitungTotalInfo(root->right);
+}
+
+
+int hitungKedalaman(address root, int start) {
+    if (root == Nil) {
+        return start;
+    }
+    
+    int kedalamanKiri = hitungKedalaman(root->left, start + 1);
+    int kedalamanKanan = hitungKedalaman(root->right, start + 1);
+    
+    if (kedalamanKiri > kedalamanKanan) {
+        return kedalamanKiri;
+    } else {
+        return kedalamanKanan;
+    }
+}
