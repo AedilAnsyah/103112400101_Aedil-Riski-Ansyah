@@ -100,7 +100,8 @@ void searchFilmByRatingRange(ListParent L, float minRate, float maxRate) {
             if (C->ratingFilm >= minRate && C->ratingFilm <= maxRate) {
                 cout << "===========================================" << endl;
                 cout << "Data Film ditemukan pada list child dari node parent " << P->namaGenre 
-                     << " pada posisi ke-" << posChild << "!" << endl;     
+                     << " pada posisi ke-" << posChild << "!" << endl;
+                
                 cout << "--- Data Film (Child) ---" << endl;
                 cout << "Judul Film  : " << C->judulFilm << endl;
                 cout << "Posisi dalam list child : posisi ke-" << posChild << endl;
@@ -130,6 +131,7 @@ void printStrukturMLL(ListParent L) {
         cout << "=== Parent " << i << " ===" << endl;
         cout << "ID Genre   : " << P->idGenre << endl;
         cout << "Nama Genre : " << P->namaGenre << endl;
+
         address_child C = P->childs.first;
         int j = 1;
         if (C == NULL) {
@@ -145,6 +147,7 @@ void printStrukturMLL(ListParent L) {
             C = C->next;
             j++;
         }
+        cout << "--------------------" << endl;
         P = P->next;
         i++;
     }
